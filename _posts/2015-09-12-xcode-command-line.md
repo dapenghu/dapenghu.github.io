@@ -7,6 +7,8 @@ tags: [Xcode]
 ---
 {% include JB/setup %}
 
+[TOC]
+
 # /usr/bin/xcodebuild
 `xcodebuild` is a command-line tool that allows you to perform build, query, analyze, test, and archive operations on your Xcode projects and workspaces from the command line. 
 It operates on one or more targets contained in your project, or a scheme contained in your project or workspace. 
@@ -158,6 +160,393 @@ Example:  Testing the MyiOSApp scheme on an iPad in the Simulator
 Example:   Testing the MyiOSApp scheme on an iOS 7.1 iPhone Retina (4-inch 64-bit) in the Simulator
 
     xcodebuild test -scheme MyiOSApp -destination 'platform=iOS Simulator,name=iPhone Retina (4-inch 64-bit),OS=7.1'
+
+## Xcode build directory Hierarchy
+
+
+    ├── Intermediates
+    │   ├── BDSub.build
+    │   ├── PrecompiledHeaders
+    │   ├── SDL.build
+    │   └── cyberplayer.build
+    │       └── Release-iphonesimulator
+    │           ├── ASIHTTP.build
+    │           ├── Base64.build
+    │           ├── CyberPlayerController.build
+    │           ├── CyberPlayerUtils.build
+    │           ├── GzipCompressor.build
+    │           ├── Reachability.build
+    │           ├── SBJSON.build
+    │           └── cyberplayer.build
+    ├── Products
+    │   └── Release-iphonesimulator
+    │       ├── cyberplayer.app
+    │       ├── cyberplayer.app.dSYM
+    │       ├── include
+    │       │   ├── CyberPlayerController
+    │       │   │   └── CyberPlayerController.h
+    │       │   └── CyberPlayerUtils
+    │       │       └── CyberPlayerUtils.h
+    │       ├── libASIHTTP.a
+    │       ├── libBDSub.a
+    │       ├── libBase64.a
+    │       ├── libCyberPlayerController.a
+    │       ├── libCyberPlayerUtils.a
+    │       ├── libGzipCompressor.a
+    │       ├── libReachability.a
+    │       ├── libSBJSON.a
+    │       ├── libSDL.a
+    │       └── usr
+    │           └── local
+    │               └── include
+    │                   ├── SDL.h
+    │                   └── *.h
+
+
+## Xcode build settings
+
+    $ xcbuild -showBuildSettings
+
+    Build settings for action build and target cyberplayer:
+    ACTION = build
+    AD_HOC_CODE_SIGNING_ALLOWED = NO
+    ALTERNATE_GROUP = staff
+    ALTERNATE_MODE = u+w,go-w,a+rX
+    ALTERNATE_OWNER = hudapeng
+    ALWAYS_SEARCH_USER_PATHS = NO
+    ALWAYS_USE_SEPARATE_HEADERMAPS = YES
+    APPLE_INTERNAL_DEVELOPER_DIR = /AppleInternal/Developer
+    APPLE_INTERNAL_DIR = /AppleInternal
+    APPLE_INTERNAL_DOCUMENTATION_DIR = /AppleInternal/Documentation
+    APPLE_INTERNAL_LIBRARY_DIR = /AppleInternal/Library
+    APPLE_INTERNAL_TOOLS = /AppleInternal/Developer/Tools
+    APPLICATION_EXTENSION_API_ONLY = NO
+    APPLY_RULES_IN_COPY_FILES = NO
+    ARCHS = armv7 arm64 i386 x86_64 armv7s
+    ARCHS_STANDARD = armv7 arm64
+    ARCHS_STANDARD_32_64_BIT = armv7 arm64
+    ARCHS_STANDARD_32_BIT = armv7
+    ARCHS_STANDARD_64_BIT = arm64
+    ARCHS_STANDARD_INCLUDING_64_BIT = armv7 arm64
+    ARCHS_UNIVERSAL_IPHONE_OS = armv7 arm64
+    AVAILABLE_PLATFORMS = iphonesimulator macosx iphoneos
+    BUILD_COMPONENTS = headers build
+    BUILD_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Products
+    BUILD_ROOT = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Products
+    BUILD_STYLE =
+    BUILD_VARIANTS = normal
+    BUILT_PRODUCTS_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Products/Release-iphoneos
+    CACHE_ROOT = /var/folders/kr/z01k_6xj15l5l6tns07rgb900000gn/C/com.apple.DeveloperTools/6.4-6E35b/Xcode
+    CCHROOT = /var/folders/kr/z01k_6xj15l5l6tns07rgb900000gn/C/com.apple.DeveloperTools/6.4-6E35b/Xcode
+    CHMOD = /bin/chmod
+    CHOWN = /usr/sbin/chown
+    CLANG_CXX_LANGUAGE_STANDARD = gnu++0x
+    CLANG_ENABLE_OBJC_ARC = NO
+    CLANG_WARN__DUPLICATE_METHOD_MATCH = YES
+    CLASS_FILE_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build/JavaClasses
+    CLEAN_PRECOMPS = YES
+    CLONE_HEADERS = NO
+    CODESIGNING_FOLDER_PATH = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Products/Release-iphoneos/cyberplayer.app
+    CODE_SIGNING_ALLOWED = YES
+    CODE_SIGNING_REQUIRED = YES
+    CODE_SIGN_CONTEXT_CLASS = XCiPhoneOSCodeSignContext
+    CODE_SIGN_IDENTITY = iPhone Developer
+    COLOR_DIAGNOSTICS = YES
+    COMBINE_HIDPI_IMAGES = NO
+    COMPOSITE_SDK_DIRS = /var/folders/kr/z01k_6xj15l5l6tns07rgb900000gn/C/com.apple.DeveloperTools/6.4-6E35b/Xcode/CompositeSDKs
+    COMPRESS_PNG_FILES = YES
+    CONFIGURATION = Release
+    CONFIGURATION_BUILD_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Products/Release-iphoneos
+    CONFIGURATION_TEMP_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos
+    CONTENTS_FOLDER_PATH = cyberplayer.app
+    COPYING_PRESERVES_HFS_DATA = NO
+    COPY_PHASE_STRIP = NO
+    COPY_RESOURCES_FROM_STATIC_FRAMEWORKS = YES
+    CP = /bin/cp
+    CREATE_INFOPLIST_SECTION_IN_BINARY = NO
+    CURRENT_ARCH = armv7s
+    CURRENT_VARIANT = normal
+    DEAD_CODE_STRIPPING = NO
+    DEBUGGING_SYMBOLS = YES
+    DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+    DEFAULT_COMPILER = com.apple.compilers.llvm.clang.1_0
+    DEFAULT_KEXT_INSTALL_PATH = /System/Library/Extensions
+    DEFINES_MODULE = NO
+    DEPLOYMENT_LOCATION = NO
+    DEPLOYMENT_POSTPROCESSING = YES
+    DERIVED_FILES_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build/DerivedSources
+    DERIVED_FILE_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build/DerivedSources
+    DERIVED_SOURCES_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build/DerivedSources
+    DEVELOPER_APPLICATIONS_DIR = /Applications/Xcode.app/Contents/Developer/Applications
+    DEVELOPER_BIN_DIR = /Applications/Xcode.app/Contents/Developer/usr/bin
+    DEVELOPER_DIR = /Applications/Xcode.app/Contents/Developer
+    DEVELOPER_FRAMEWORKS_DIR = /Applications/Xcode.app/Contents/Developer/Library/Frameworks
+    DEVELOPER_FRAMEWORKS_DIR_QUOTED = /Applications/Xcode.app/Contents/Developer/Library/Frameworks
+    DEVELOPER_LIBRARY_DIR = /Applications/Xcode.app/Contents/Developer/Library
+    DEVELOPER_SDK_DIR = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs
+    DEVELOPER_TOOLS_DIR = /Applications/Xcode.app/Contents/Developer/Tools
+    DEVELOPER_USR_DIR = /Applications/Xcode.app/Contents/Developer/usr
+    DEVELOPMENT_LANGUAGE = English
+    DOCUMENTATION_FOLDER_PATH = cyberplayer.app/English.lproj/Documentation
+    DO_HEADER_SCANNING_IN_JAM = NO
+    DSTROOT = /tmp/cyberplayer.dst
+    DT_TOOLCHAIN_DIR = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain
+    DWARF_DSYM_FILE_NAME = cyberplayer.app.dSYM
+    DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT = NO
+    DWARF_DSYM_FOLDER_PATH = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Products/Release-iphoneos
+    EFFECTIVE_PLATFORM_NAME = -iphoneos
+    EMBEDDED_CONTENT_CONTAINS_SWIFT = NO
+    EMBEDDED_PROFILE_NAME = embedded.mobileprovision
+    ENABLE_HEADER_DEPENDENCIES = YES
+    ENTITLEMENTS_ALLOWED = YES
+    ENTITLEMENTS_REQUIRED = YES
+    EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS = .DS_Store .svn .git .hg CVS
+    EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = *.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj
+    EXECUTABLES_FOLDER_PATH = cyberplayer.app/Executables
+    EXECUTABLE_FOLDER_PATH = cyberplayer.app
+    EXECUTABLE_NAME = cyberplayer
+    EXECUTABLE_PATH = cyberplayer.app/cyberplayer
+    EXPANDED_CODE_SIGN_IDENTITY =
+    EXPANDED_CODE_SIGN_IDENTITY_NAME =
+    EXPANDED_PROVISIONING_PROFILE =
+    FILE_LIST = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build/Objects/LinkFileList
+    FIXED_FILES_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build/FixedFiles
+    FRAMEWORKS_FOLDER_PATH = cyberplayer.app/Frameworks
+    FRAMEWORK_FLAG_PREFIX = -framework
+    FRAMEWORK_VERSION = A
+    FULL_PRODUCT_NAME = cyberplayer.app
+    GCC3_VERSION = 3.3
+    GCC_C_LANGUAGE_STANDARD = gnu99
+    GCC_INLINES_ARE_PRIVATE_EXTERN = YES
+    GCC_PFE_FILE_C_DIALECTS = c objective-c c++ objective-c++
+    GCC_PRECOMPILE_PREFIX_HEADER = YES
+    GCC_PREFIX_HEADER = CyberPlayerTest/CyberPlayerTest-Prefix.pch
+    GCC_SYMBOLS_PRIVATE_EXTERN = YES
+    GCC_THUMB_SUPPORT = YES
+    GCC_TREAT_WARNINGS_AS_ERRORS = NO
+    GCC_VERSION = com.apple.compilers.llvm.clang.1_0
+    GCC_VERSION_IDENTIFIER = com_apple_compilers_llvm_clang_1_0
+    GCC_WARN_ABOUT_RETURN_TYPE = YES
+    GCC_WARN_UNINITIALIZED_AUTOS = YES
+    GCC_WARN_UNUSED_VARIABLE = YES
+    GENERATE_MASTER_OBJECT_FILE = NO
+    GENERATE_PKGINFO_FILE = YES
+    GENERATE_PROFILING_CODE = NO
+    GID = 20
+    GROUP = staff
+    HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT = YES
+    HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES = YES
+    HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS = YES
+    HEADERMAP_INCLUDES_PROJECT_HEADERS = YES
+    HEADERMAP_USES_FRAMEWORK_PREFIX_ENTRIES = YES
+    HEADERMAP_USES_VFS = NO
+    HEADER_SEARCH_PATHS = ../../native-core/libsdl/SDL/include/** ../../native-core/coreplayer/** ../../native-core/libBDSub/** ../../native-core/libBDSub/include/**
+    ICONV = /usr/bin/iconv
+    INFOPLIST_EXPAND_BUILD_SETTINGS = YES
+    INFOPLIST_FILE = CyberPlayerTest/CyberPlayerTest-Info.plist
+    INFOPLIST_OUTPUT_FORMAT = binary
+    INFOPLIST_PATH = cyberplayer.app/Info.plist
+    INFOPLIST_PREPROCESS = NO
+    INFOSTRINGS_PATH = cyberplayer.app/English.lproj/InfoPlist.strings
+    INSTALL_DIR = /tmp/cyberplayer.dst/Applications
+    INSTALL_GROUP = staff
+    INSTALL_MODE_FLAG = u+w,go-w,a+rX
+    INSTALL_OWNER = hudapeng
+    INSTALL_PATH = /Applications
+    INSTALL_ROOT = /tmp/cyberplayer.dst
+    IPHONEOS_DEPLOYMENT_TARGET = 8.2
+    JAVAC_DEFAULT_FLAGS = -J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8
+    JAVA_APP_STUB = /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub
+    JAVA_ARCHIVE_CLASSES = YES
+    JAVA_ARCHIVE_TYPE = JAR
+    JAVA_COMPILER = /usr/bin/javac
+    JAVA_FOLDER_PATH = cyberplayer.app/Java
+    JAVA_FRAMEWORK_RESOURCES_DIRS = Resources
+    JAVA_JAR_FLAGS = cv
+    JAVA_SOURCE_SUBDIR = .
+    JAVA_USE_DEPENDENCIES = YES
+    JAVA_ZIP_FLAGS = -urg
+    JIKES_DEFAULT_FLAGS = +E +OLDCSO
+    KEEP_PRIVATE_EXTERNS = NO
+    LD_DEPENDENCY_INFO_FILE = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build/Objects-normal/armv7s/cyberplayer_dependency_info.dat
+    LD_GENERATE_MAP_FILE = NO
+    LD_MAP_FILE_PATH = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build/cyberplayer-LinkMap-normal-armv7s.txt
+    LD_NO_PIE = NO
+    LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER = YES
+    LEGACY_DEVELOPER_DIR = /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer
+    LEX = lex
+    LIBRARY_FLAG_NOSPACE = YES
+    LIBRARY_FLAG_PREFIX = -l
+    LIBRARY_KEXT_INSTALL_PATH = /Library/Extensions
+    LIBRARY_SEARCH_PATHS =  "/Volumes/sd/repo/cyberplayer/ios-project/CyberPlayerTest/../../native-core/libffmpeg/ios_lib" /Users/baidu/cyberplayer/native-core/libffmpeg/ios_lib/lib /Volumes/sd/repo/cyberplayer/native-core/libffmpeg/ios_lib/lib
+    LINKER_DISPLAYS_MANGLED_NAMES = NO
+    LINK_FILE_LIST_normal_arm64 =
+    LINK_FILE_LIST_normal_armv7 =
+    LINK_FILE_LIST_normal_armv7s =
+    LINK_FILE_LIST_normal_i386 =
+    LINK_FILE_LIST_normal_x86_64 =
+    LINK_WITH_STANDARD_LIBRARIES = YES
+    LOCALIZED_RESOURCES_FOLDER_PATH = cyberplayer.app/English.lproj
+    LOCAL_ADMIN_APPS_DIR = /Applications/Utilities
+    LOCAL_APPS_DIR = /Applications
+    LOCAL_DEVELOPER_DIR = /Library/Developer
+    LOCAL_LIBRARY_DIR = /Library
+    MACH_O_TYPE = mh_execute
+    MAC_OS_X_PRODUCT_BUILD_VERSION = 14B25
+    MAC_OS_X_VERSION_ACTUAL = 101001
+    MAC_OS_X_VERSION_MAJOR = 101000
+    MAC_OS_X_VERSION_MINOR = 1001
+    MODULE_CACHE_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/ModuleCache
+    NATIVE_ARCH = armv7
+    NATIVE_ARCH_32_BIT = i386
+    NATIVE_ARCH_64_BIT = x86_64
+    NATIVE_ARCH_ACTUAL = x86_64
+    NO_COMMON = YES
+    OBJECT_FILE_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build/Objects
+    OBJECT_FILE_DIR_normal = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build/Objects-normal
+    OBJROOT = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates
+    ONLY_ACTIVE_ARCH = NO
+    OPTIMIZATION_LEVEL = 0
+    OS = MACOS
+    OSAC = /usr/bin/osacompile
+    OTHER_CFLAGS = -DNS_BLOCK_ASSERTIONS=1
+    OTHER_CPLUSPLUSFLAGS = -DNS_BLOCK_ASSERTIONS=1
+    OTHER_LDFLAGS = -ObjC
+    PACKAGE_TYPE = com.apple.package-type.wrapper.application
+    PASCAL_STRINGS = YES
+    PATH = /Applications/Xcode.app/Contents/Developer/usr/bin:/Volumes/sd/local/android-sdk-macosx/platform-tools:/Volumes/sd/local/android-sdk-macosx/build-tools/23.0.0:/Volumes/sd/local/android-sdk-macosx/tools:/Volumes/sd/local/android-ndk-r9d:/usr/local/heroku/bin:/Users/hdp/bin:/opt/local/bin:/opt/local/sbin:/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home/bin:/Users/hdp/local/apache-maven-3.3.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/texbin:/Volumes/sd/local/android-ndk-r9d
+    PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES = /usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms
+    PBDEVELOPMENTPLIST_PATH = cyberplayer.app/pbdevelopment.plist
+    PFE_FILE_C_DIALECTS = objective-c
+    PKGINFO_FILE_PATH = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build/PkgInfo
+    PKGINFO_PATH = cyberplayer.app/PkgInfo
+    PLATFORM_DEVELOPER_APPLICATIONS_DIR = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Applications
+    PLATFORM_DEVELOPER_BIN_DIR = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin
+    PLATFORM_DEVELOPER_LIBRARY_DIR = /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library
+    PLATFORM_DEVELOPER_SDK_DIR = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs
+    PLATFORM_DEVELOPER_TOOLS_DIR = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Tools
+    PLATFORM_DEVELOPER_USR_DIR = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr
+    PLATFORM_DIR = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform
+    PLATFORM_NAME = iphoneos
+    PLATFORM_PREFERRED_ARCH = arm64
+    PLATFORM_PRODUCT_BUILD_VERSION = 12H141
+    PLIST_FILE_OUTPUT_FORMAT = binary
+    PLUGINS_FOLDER_PATH = cyberplayer.app/PlugIns
+    PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES
+    PRECOMP_DESTINATION_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build/PrefixHeaders
+    PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO
+    PRIVATE_HEADERS_FOLDER_PATH = cyberplayer.app/PrivateHeaders
+    PRODUCT_MODULE_NAME = cyberplayer
+    PRODUCT_NAME = cyberplayer
+    PRODUCT_SETTINGS_PATH = /Volumes/sd/repo/cyberplayer/ios-project/CyberPlayerTest/CyberPlayerTest/CyberPlayerTest-Info.plist
+    PRODUCT_TYPE = com.apple.product-type.application
+    PROFILING_CODE = NO
+    PROJECT = cyberplayer
+    PROJECT_DERIVED_FILE_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/DerivedSources
+    PROJECT_DIR = /Volumes/sd/repo/cyberplayer/ios-project/CyberPlayerTest
+    PROJECT_FILE_PATH = /Volumes/sd/repo/cyberplayer/ios-project/CyberPlayerTest/cyberplayer.xcodeproj
+    PROJECT_NAME = cyberplayer
+    PROJECT_TEMP_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build
+    PROJECT_TEMP_ROOT = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates
+    PROVISIONING_PROFILE_REQUIRED = YES
+    PUBLIC_HEADERS_FOLDER_PATH = cyberplayer.app/Headers
+    RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS = YES
+    REMOVE_CVS_FROM_RESOURCES = YES
+    REMOVE_GIT_FROM_RESOURCES = YES
+    REMOVE_HEADERS_FROM_EMBEDDED_BUNDLES = YES
+    REMOVE_HG_FROM_RESOURCES = YES
+    REMOVE_SVN_FROM_RESOURCES = YES
+    RESOURCE_RULES_REQUIRED = YES
+    REZ_COLLECTOR_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build/ResourceManagerResources
+    REZ_OBJECTS_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build/ResourceManagerResources/Objects
+    SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO
+    SCRIPTS_FOLDER_PATH = cyberplayer.app/Scripts
+    SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk
+    SDK_DIR = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk
+    SDK_NAME = iphoneos8.4
+    SDK_PRODUCT_BUILD_VERSION = 12H141
+    SED = /usr/bin/sed
+    SEPARATE_STRIP = NO
+    SEPARATE_SYMBOL_EDIT = NO
+    SET_DIR_MODE_OWNER_GROUP = YES
+    SET_FILE_MODE_OWNER_GROUP = NO
+    SHALLOW_BUNDLE = YES
+    SHARED_DERIVED_FILE_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Products/Release-iphoneos/DerivedSources
+    SHARED_FRAMEWORKS_FOLDER_PATH = cyberplayer.app/SharedFrameworks
+    SHARED_PRECOMPS_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/PrecompiledHeaders
+    SHARED_SUPPORT_FOLDER_PATH = cyberplayer.app/SharedSupport
+    SKIP_INSTALL = NO
+    SOURCE_ROOT = /Volumes/sd/repo/cyberplayer/ios-project/CyberPlayerTest
+    SRCROOT = /Volumes/sd/repo/cyberplayer/ios-project/CyberPlayerTest
+    STRINGS_FILE_OUTPUT_ENCODING = binary
+    STRIP_INSTALLED_PRODUCT = YES
+    STRIP_STYLE = debugging
+    SUPPORTED_DEVICE_FAMILIES = 1,2
+    SUPPORTED_PLATFORMS = iphonesimulator iphoneos
+    SYMROOT = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Products
+    SYSTEM_ADMIN_APPS_DIR = /Applications/Utilities
+    SYSTEM_APPS_DIR = /Applications
+    SYSTEM_CORE_SERVICES_DIR = /System/Library/CoreServices
+    SYSTEM_DEMOS_DIR = /Applications/Extras
+    SYSTEM_DEVELOPER_APPS_DIR = /Applications/Xcode.app/Contents/Developer/Applications
+    SYSTEM_DEVELOPER_BIN_DIR = /Applications/Xcode.app/Contents/Developer/usr/bin
+    SYSTEM_DEVELOPER_DEMOS_DIR = /Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples
+    SYSTEM_DEVELOPER_DIR = /Applications/Xcode.app/Contents/Developer
+    SYSTEM_DEVELOPER_DOC_DIR = /Applications/Xcode.app/Contents/Developer/ADC Reference Library
+    SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR = /Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools
+    SYSTEM_DEVELOPER_JAVA_TOOLS_DIR = /Applications/Xcode.app/Contents/Developer/Applications/Java Tools
+    SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR = /Applications/Xcode.app/Contents/Developer/Applications/Performance Tools
+    SYSTEM_DEVELOPER_RELEASENOTES_DIR = /Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes
+    SYSTEM_DEVELOPER_TOOLS = /Applications/Xcode.app/Contents/Developer/Tools
+    SYSTEM_DEVELOPER_TOOLS_DOC_DIR = /Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools
+    SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR = /Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools
+    SYSTEM_DEVELOPER_USR_DIR = /Applications/Xcode.app/Contents/Developer/usr
+    SYSTEM_DEVELOPER_UTILITIES_DIR = /Applications/Xcode.app/Contents/Developer/Applications/Utilities
+    SYSTEM_DOCUMENTATION_DIR = /Library/Documentation
+    SYSTEM_KEXT_INSTALL_PATH = /System/Library/Extensions
+    SYSTEM_LIBRARY_DIR = /System/Library
+    TARGETED_DEVICE_FAMILY = 1,2
+    TARGETNAME = cyberplayer
+    TARGET_BUILD_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Products/Release-iphoneos
+    TARGET_NAME = cyberplayer
+    TARGET_TEMP_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build
+    TEMP_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build
+    TEMP_FILES_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build
+    TEMP_FILE_DIR = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates/cyberplayer.build/Release-iphoneos/cyberplayer.build
+    TEMP_ROOT = /Users/hdp/Library/Developer/Xcode/DerivedData/cyberplayer-gkpveozzbhfixrhbcxuedbadxbpf/Build/Intermediates
+    TOOLCHAINS = com.apple.dt.toolchain.iOS8_4
+    TREAT_MISSING_BASELINES_AS_TEST_FAILURES = NO
+    UID = 501
+    UNLOCALIZED_RESOURCES_FOLDER_PATH = cyberplayer.app
+    UNSTRIPPED_PRODUCT = NO
+    USER = hudapeng
+    USER_APPS_DIR = /Users/hdp/Applications
+    USER_HEADER_SEARCH_PATHS = ../../native-core/libffmpeg/**
+    USER_LIBRARY_DIR = /Users/hdp/Library
+    USE_DYNAMIC_NO_PIC = YES
+    USE_HEADERMAP = YES
+    USE_HEADER_SYMLINKS = NO
+    VALIDATE_PRODUCT = YES
+    VALID_ARCHS = i386 x86_64 armv7 armv7s arm64
+    VERBOSE_PBXCP = NO
+    VERSIONPLIST_PATH = cyberplayer.app/version.plist
+    VERSION_INFO_BUILDER = hudapeng
+    VERSION_INFO_FILE = cyberplayer_vers.c
+    VERSION_INFO_STRING = "@(#)PROGRAM:cyberplayer  PROJECT:cyberplayer-"
+    WRAPPER_EXTENSION = app
+    WRAPPER_NAME = cyberplayer.app
+    WRAPPER_SUFFIX = .app
+    XCODE_APP_SUPPORT_DIR = /Applications/Xcode.app/Contents/Developer/Library/Xcode
+    XCODE_PRODUCT_BUILD_VERSION = 6E35b
+    XCODE_VERSION_ACTUAL = 0640
+    XCODE_VERSION_MAJOR = 0600
+    XCODE_VERSION_MINOR = 0640
+    XPCSERVICES_FOLDER_PATH = cyberplayer.app/XPCServices
+    YACC = yacc
+    arch = armv7s
+    diagnostic_message_length = 190
+    variant = normal
+
 
 -----------------------------------------------------------
 
