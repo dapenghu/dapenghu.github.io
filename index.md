@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: Hu Dapeng's Blog
+tagline: 好记性不如烂笔头
 ---
 {% include JB/setup %}
 
