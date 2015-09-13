@@ -33,6 +33,11 @@ Install libsvm.jar step by step:
 
 # Create Data Set
 
+<!--
+  怎样在excel中自动生成数据
+  http://jingyan.baidu.com/article/a3aad71a86f2dab1fb009688.html
+-->
+
 ## Training Data Set
 For Rehmertz 2, create training data file [rehmertz-2-training.arff](/assets/Rehmertz-2-training.arff).
 
