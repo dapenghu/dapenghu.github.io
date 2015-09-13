@@ -34,7 +34,7 @@ Install libsvm.jar step by step:
 # Create Data Set
 
 ## Training Data Set
-For Rehmertz 2, create training data file rehmertz-2-training.arff.
+For Rehmertz 2, create training data file [rehmertz-2-training.arff](/assets/Rehmertz-2-training.arff).
 
     %
     % Rehmertz Training Data
@@ -53,7 +53,7 @@ For Rehmertz 2, create training data file rehmertz-2-training.arff.
     4.0,4.0,4.00,fail
     4.0,4.0,6.00,pass
 
-For Rehmertz 1 and Rehmertz 3, create training data file rehmertz-1-3-training.arff.
+For Rehmertz 1 and Rehmertz 3, create training data file [rehmertz-1-3-training.arff](Rehmertz-1-3-training.arff).
 
     %
     % Rehmertz Training Data
@@ -76,7 +76,7 @@ For Rehmertz 1 and Rehmertz 3, create training data file rehmertz-1-3-training.a
 
 
 ## Test Data Set
-Create testing data file rehmertz-test.arff.
+Create testing data file [rehmertz-test.arff](Rehmertz-2-test.arff).
 
     %
     % Rehmertz Testing Data
