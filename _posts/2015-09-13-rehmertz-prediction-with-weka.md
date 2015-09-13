@@ -150,6 +150,8 @@ Create testing data file [rehmertz-test.arff](Rehmertz-2-test.arff).
 
 - Confirm the `(Nom) result` is selected as target. Then click `start`
 
+![Weka_GUI_Chooser](/assets/nom-result.png)
+
 - The execution result is shown 
 
 ![Weka_GUI_Chooser](/assets/logistic-result.png)
