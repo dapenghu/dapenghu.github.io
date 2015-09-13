@@ -31,7 +31,7 @@ Install libsvm.jar step by step:
 - Copy the jar file `java/libsvm.jar` to the directory `/Applications/weka-3-6-13-oracle-jvm.app/Contents/Java/Classes`. This directory is in the classpath of Weka
 - Go to directory `/Applications/weka-3-6-13-oracle-jvm.app/Contents/Java/Classes`, extract the libsvm.jar by the command `jar xf libsvm.jar`
 
-# Data Set
+# Create Data Set
 
 ## Training Data Set
 For Rehmertz 2, create training data file rehmertz-2-training.arff.
@@ -100,17 +100,50 @@ Create testing data file rehmertz-test.arff.
     3,3,1.8,pass
     3,3,2.0,pass
     3,3,2.2,pass
+    ... ...
+    3,3,8.0,pass
 
 
 # Detail Steps
 
-## Load the training data file
+## Load traing data set
 - Open Weka GUI and click the "Explorer"
 
     ![Weka_GUI_Chooser](/assets/Weka_GUI_Chooser.png)
 
-- In the "Weka Explorer" GUI, select "Preprocess" tab, and click the `Open File` button and select the file `rehmertz-2-training.arff`. The the training data for Rehmertz 2 is loaded.
+- In the "Weka Explorer" Window, select "Preprocess" tab, and click the `Open File` button and select the file `rehmertz-2-training.arff`. The the training data for Rehmertz 2 is loaded.
 
     ![Weka_GUI_Chooser](/assets/Weka_preprocess.jpg)
 
-## Load the test data file
+## Select Classification Algorithm
+- Select the `Classify` tab in the "Weka Explorer" Window, and click `choose` button in Classifier area
+
+    ![Weka_GUI_Chooser](/assets/Weka_choose_classifier.jpg)
+    
+### Select the classification algorithm `libSVM` 
+<!--
+<img src="/assets/libsvm.png"  alt="aaa" align="middle" height=40% width=40% />
+-->
+
+![Weka_GUI_Chooser](/assets/libsvm.png)
+
+## Select Classification Options
+- Under the same `Classify` tab, in the `Test options` area, select `Supplied test set` and click the `Set`-> `Open file...` to the load the file `rehmertz-test.arff`.
+
+![Weka_GUI_Chooser](/assets/supplied-test-set.png)
+
+![Weka_GUI_Chooser](/assets/select-test-data.png)
+
+- Click `More options` in the `Test options` area. In the `Classifier evaluation options` window, select `Output predictions` option, and set `Output additional attributes` to 3.
+
+![Weka_GUI_Chooser](/assets/classification-options.png)
+
+## Run Classfication and Checkt Result
+
+- Confirm the `(Nom) result` is selected as target. Then click `start`
+
+- The execution result is shown 
+
+![Weka_GUI_Chooser](/assets/logistic-result.png)
+
+

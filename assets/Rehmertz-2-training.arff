@@ -1,0 +1,15 @@
+%
+% Rehmertz Testing Result
+%
+@relation Rehmertz
+
+@attribute torque-diff numeric
+@attribute resistance-diff numeric
+@attribute cost numeric
+@attribute result {pass, fail}
+
+@data
+1.0,0.4,0.18,fail
+0.7,0.9,1.15,pass
+4.0,4.0,4.00,fail
+4.0,4.0,6.00,pass
