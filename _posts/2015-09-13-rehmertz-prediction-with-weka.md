@@ -120,25 +120,28 @@ Create testing data file rehmertz-test.arff.
 
     ![Weka_GUI_Chooser](/assets/Weka_choose_classifier.jpg)
     
-### Select the classification algorithm `libSVM` 
 <!--
-<img src="/assets/libsvm.png"  alt="aaa" align="middle" height=40% width=40% />
--->
+### Select the classification algorithm `libSVM` 
 
 ![Weka_GUI_Chooser](/assets/libsvm.png)
+-->
+### Select the classification algorithm `logistic` 
 
-## Select Classification Options
+![Weka_GUI_Chooser](/assets/logistic.png)
+
+## Supply test data file
 - Under the same `Classify` tab, in the `Test options` area, select `Supplied test set` and click the `Set`-> `Open file...` to the load the file `rehmertz-test.arff`.
 
 ![Weka_GUI_Chooser](/assets/supplied-test-set.png)
 
 ![Weka_GUI_Chooser](/assets/select-test-data.png)
 
+## Select Classification Options
 - Click `More options` in the `Test options` area. In the `Classifier evaluation options` window, select `Output predictions` option, and set `Output additional attributes` to 3.
 
 ![Weka_GUI_Chooser](/assets/classification-options.png)
 
-## Run Classfication and Checkt Result
+## Run Classfication and Check Result
 
 - Confirm the `(Nom) result` is selected as target. Then click `start`
 
