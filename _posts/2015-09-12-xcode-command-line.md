@@ -11,9 +11,22 @@ tags: [Xcode]
 
 # /usr/bin/xcodebuild
 `xcodebuild` is a command-line tool that allows you to perform build, query, analyze, test, and archive operations on your Xcode projects and workspaces from the command line. 
+
 It operates on one or more targets contained in your project, or a scheme contained in your project or workspace. 
 `xcodebuild` provides several options for performing these operations as seen in its man page. 
 `xcodebuild` saves the output of your commands in the locations defined in the `Locations preferences` pane of your Xcode application, by default
+
+## Build Action
+
+Available build actions are:
+
+- build      Build the target in the build root (SYMROOT).  This is the default build action.
+- analyze    Build and analyze a target or scheme from the build root (SYMROOT).  This requires specifying a scheme.
+- archive    Archive a scheme from the build root (SYMROOT).  This requires specifying a scheme.
+- test       Test a scheme from the build root (SYMROOT).  This requires specifying a scheme and optionally a destination.
+- installsrc Copy the source of the project to the source root (SRCROOT).
+- install    Build the target and install it into the target's installation directory in the distribution root (DSTROOT).
+- clean      Remove build products and intermediate files from the build root (SYMROOT).
 
 ## List all targets, build configurations, and schemes
 run the following command in Terminal:
@@ -40,6 +53,17 @@ For example, listing all information about your project
     Schemes:
         MyMacApp
         MyiOSApp
+        
+## Defaults
+
+If not specify any parameter, `xcodebuild` will run the `build` action for the only project in the current directory with the first target and default configruation.
+
+- project
+    If there is only `*.xcodeproj` directory, xcodebuild automatically select it.
+    If there are multiple `*.xcodeproj` projects, you will need to use -project to indicate which project should be built.
+- target/configuration
+    By default, xcodebuild use the first target listed in the project, with the default build configuration. The
+     order of the targets is a property of the project and is the same for all users of the project.
 
 
 ## Build a scheme in your project
