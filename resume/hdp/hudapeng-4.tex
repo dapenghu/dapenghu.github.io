@@ -1,0 +1,195 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+% moderncv themes
+%\moderncvtheme[blue, roman]{casual}
+% optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[blue]{casual}                % idem
+\moderncvtheme[blue]{classic}                % idem  casual,  oldstyle,  banking, classic
+
+\usepackage[utf8]{inputenc}
+%%\usepackage{graphicx}
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{verbatim}
+% %\usepackage{graphicx, listings, multicol, wrapfig, caption, subfig, color, }
+
+%\quote{``Do what you fear, and the death of fear is certain.''\\-- Anthony Robbins}
+\AtBeginDocument{\recomputelengths}  % required when changes are made to page layout lengths
+% personal data
+\firstname{Dapeng}
+\familyname{Hu}
+\title{Curriculum Vitae }
+\mobile{+86 18612523725}
+%\mobile{1-669-300-7154}
+\social[linkedin][cn.linkedin.com/in/hudapeng]{LinkedIn/hudapeng}
+\email{damon.hu@gmail.com}
+%\email{hudapeng1976@gmail.com}
+% public resume address: www.indeed.com/me/dapeng_hu
+%\phone{(312) 413-8265}                   % optional, remove the line if not wanted
+%\fax{312 996 1491}                          % optional, remove the line if not wanted
+%\photo[64pt]{avatar.jpg}                   % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file;
+
+%\usepackage{hyperref}
+%\hypersetup{    colorlinks=true,    linkcolor=blue,    filecolor=magenta,  urlcolor=cyan}
+\AfterPreamble{\hypersetup{ colorlinks=false,  linkcolor=blue,  filecolor=magenta,    urlcolor=cyan}}
+\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+%% \renewcommand*{\sectionfont}{\LARGE\sffamily\monospace\slshape}
+%% \renewcommand*\addressfont{\fontfamily{pzc}\selectfont}
+%% \renewcommand*\sectionfont{\fontfamily{pzc}\fontsize{20}{24}\selectfont}
+
+\begin{document}
+\maketitle
+
+%\section{Master thesis}
+%\cvline{title}{\emph{Title}}
+%\cvline{supervisors}{Supervisors}
+%\cvline{description}{\small Short thesis abstract}
+
+\section{Project Experience}
+\vspace{2ex}  
+%%=========================  Oracle  ================================
+\cventry{ 
+    \begin{minipage}[p]{14mm}
+        \includegraphics[width=15mm]{images/oracle} 
+   \end{minipage} }
+{ Oracle Corporation -- Principal Software Developer}{}{}{}{}
+\vspace{1ex}  
+\cventry{2011--present}{WebLogic Server}{JavaEE, Linux, Gradle}{}{}
+{
+  Oracle WebLogic Server is an application server across conventional and cloud environments. It enables enterprises to deploy mission-critical applications in a robust, secure, highly available, and scalable environment.
+  \begin{itemize}
+    \item[-] Acted as tech leader for connector container and responsible for designing and implementing enhancement or 
+               new features, e.g. Multi-Tenancy, JCA(Java Connector Architecture)1.7 etc.
+  \end{itemize}
+}
+
+\vspace*{0.2\baselineskip}
+\cventry{2012--2013}{GlassFish Server}{JavaEE, Linux, Maven}{}{}
+{
+  GlassFish Server is an open-source application server  and the reference implementation of the Java EE. It allows developers to create enterprise 
+  applications that are portable and scalable,  and that integrate with legacy technologies.
+  \begin{itemize}
+    \item[-]Contributed to technical discussion in expert group of JCA (Java Connector Architecture) and related specification for Java EE 7, and responsible for implementing new features in GlassFish 4.0
+  \end{itemize}
+}
+
+%%==========================  Zuora  ===============================
+%\vspace*{0.2\baselineskip}
+%\vspace*{0.2\baselineskip}
+%\vspace{2ex}  
+%\cventry{ 
+%    \begin{minipage}[p]{17mm}
+%        \includegraphics[width=20mm]{images/zuora.jpeg} 
+%    \end{minipage} }
+%    { Zuora -- Senior Software Developer}{Startup}{}{}{}
+%    
+%\vspace*{0.2\baselineskip}
+%\cventry{2010--2010}{Automatic Subscription and Billing}{Java, Spring}{}{}
+%{
+%     A SaaS application for subscription business model where a customer must pay a subscription price to have access to product/service. It helps to automate billing, commerce, and finance operations.
+%}    
+%%==========================  Nortel  ===============================
+\vspace{2ex}  
+\cventry{
+    \begin{minipage}[p]{8mm}
+            \includegraphics[width=8mm]{images/nortel} 
+    \end{minipage}}
+{Nortel Networks -- Senior Software Developer}{Telecommunication}{}{}{}
+\cventry{2008--2010}{Agile Communication Environment (ACE)}{Java, Spring}{Scrum}{}
+{
+  ACE implements a set of web services (defined by Parlay X) which enable software developers to use the capability of an underlying telephone network. It aims at integrating telecommunication functions into existing enterprise applications and business processes. 
+  \begin{itemize}
+    \item[-] Designed and implemented performance monitoring module which glean performance indicators of each web service. Also contributed to the integration with IBM Sametime, which is a platform that provides real-time, unified communications and collaboration for enterprises.
+  \end{itemize}
+}
+
+\vspace*{0.2\baselineskip}
+\cventry{2007--2007}{Specification Search Engine}{Java, Nutch, Python}{}{}
+{
+    An internal searching engine based on Apache Nutch. It helps technical staffs to quickly lookup specification documents in telecommunication industry, say ITU-T, 3GPP and IETF.
+}
+
+\vspace*{0.2\baselineskip}
+\cventry{2003--2007}{Computer Aided Testing Tool (CATT)}{Java, Ant, SS7, 3GPP}{}{}
+{
+  CATT is unified solution for interactive/automation testing of telecommunication networks. It provides various distributed simulators for protocol testing.
+  \begin{itemize}
+    \item[-] Responsible for developing and maintaining protocol simulators for 3G core network circuit switch field, e.g. H.248, and Q.2630.
+  \end{itemize}
+}
+\pagebreak
+%%============================  Huawei  =============================
+\vspace*{0.2\baselineskip}
+\vspace*{0.2\baselineskip}
+\cventry{
+    \begin{minipage}[p]{8mm}
+            \includegraphics[width=8mm]{images/huawei}
+    \end{minipage}}
+{Huawei Technologies -- Software Developer}{Telecommunication}{}{}{}
+
+\cventry{2001--2003}{UMG8900 Universal Multi-Media Gateway}{C, VxWorks, H.248}{}{}
+{
+  A core network device in the GSM/UMTS solution. It implements service bearer conversion, inter-working,  and service stream format processing.
+  \begin{itemize}
+    \item[-] Responsible for designing and developing resource management for Call Management. It was used to manage resources across the whole equipment and load-balancing based on workload on each blade.
+  \end{itemize}
+}
+
+%\vspace*{0.2\baselineskip}
+%\cventry{2001-2002}{Quidway A8010 Expert}{C, pSOS}{}{}
+%{
+%  Quidway A8010 Expert is a large-capacity access server providing Modem, ISDN, VoIP, FoIP and POS interfaces. 
+%  It is designed for ISPs, carriers and enterprises, helping them construct a VoIP network or a dial-up access network.
+%}
+
+%%=========================================================
+\section{Education}
+\vspace*{0.2\baselineskip}
+\cventry{
+    \begin{minipage}[p]{8mm}
+    \includegraphics[width=8mm]{images/pku}
+    \end{minipage}
+    }
+{Peking University}{School of Mathematics}{Beijing}{China}{}
+\cventry{1998--2001}{M.S. in Applied Mathematics}{}{}{}{}
+\vspace*{0.2\baselineskip}
+\cventry{
+    \begin{minipage}[p]{8mm}
+            \includegraphics[width=8mm]{images/sdu}
+    \end{minipage}
+     }
+{Shandong University}{School of Mathematics}{Jinan}{China}{}
+\cventry{1994--1998}{B.S. in Computational Mathematics}{}{}{}{}
+
+\section{Skills}
+\vspace*{0.2\baselineskip}
+\cventry{Advanced}{Java, Eclipse, WebLogic, GlassFish, UML}{}{}{}{}
+\cventry{Intermediate}{Groovy, Ant, Maven, C, XML/XSD, JProfiler, MAT, Spring}{}{}{}{}
+\cventry{Basic}{Python, Gradle, SQL, Hadoop, Lucene, \LaTeX}{}{}{}{}
+
+\section{Patent}
+\cventry{2002}{Business resource distribution method}
+{\textit{Publication number: \href[]{http://www.google.co.uk/patents/CN1509009A?cl=en}{CN1509009 A}}}{}{}{}{}
+\begin{comment}
+Another possible patent is: SYSTEM AND METHOD FOR SUPPORTING CONNECTORS IN A MULTI TENANT APPLICATION SERVER ENVIRONMENT
+\end{comment}
+\section{Certifications}
+\cventry{
+    \begin{minipage}[p]{9mm}
+        \includegraphics[width=9mm]{images/scea}
+    \end{minipage}
+}
+{Sun Certified Enterprise Architect for Java EE 5.0 }{}{}{}{}
+\vspace*{0.4\baselineskip}
+\cventry{ 
+    \begin{minipage}[p]{9mm}
+        \includegraphics[width=9mm]{images/scjp}
+    \end{minipage}
+}
+{Sun Certified Programmer for Java SE 6.0 }{}{}{}{}
+
+% \closesection{}                   % needed to renewcommands
+% \renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+\end{document}
