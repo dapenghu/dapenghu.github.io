@@ -2,8 +2,8 @@
 layout: post
 title: "Open Source Video Player Investigation"
 description: ""
-category: 
-tags: []
+category: Player
+tags: [iOS, Player]
 ---
 {% include JB/setup %}
 
