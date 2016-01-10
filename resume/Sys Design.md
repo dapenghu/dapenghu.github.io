@@ -13,6 +13,10 @@
 [CS6200	Informa.on	Retrieval](http://www.ccs.neu.edu/course/cs6200f13/cs6200-f13-2.pdf)
 [The Anatomy of a Large-Scale Hypertextual Web Search Engine](http://infolab.stanford.edu/~backrub/google.html)
 
+## Disk Access Time
+The **access time** or **response time** of a rotating drive is a measure of the time it takes before the drive can actually transfer data. 
+
+Access Time = Seek Time + Rotation Latency
 
 ## LSS
 
