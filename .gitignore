@@ -8,3 +8,7 @@ _site
 
 *.gz
 
+
+*.db
+
+resume/hdp/hudapeng-ms-2.pdf
