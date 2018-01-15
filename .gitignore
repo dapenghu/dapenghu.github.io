@@ -11,4 +11,6 @@ _site
 
 *.db
 
-resume/hdp/hudapeng-ms-2.pdf
+resume/hdp/*.pdf
+
+resume/zf/*.pdf

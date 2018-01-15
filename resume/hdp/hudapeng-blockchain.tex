@@ -1,0 +1,253 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Header
+% Chinese version should be built with XeLaTex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{moderncv}
+
+
+% optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[blue]{classic}                % idem  casual,  oldstyle,  banking, classic
+
+% Configuration for Chinese
+\usepackage[utf8]{inputenc}
+\usepackage[slantfont,boldfont]{xeCJK}
+\setCJKmainfont{STSong}
+%\setCJKmainfont{SimSun}
+%\setCJKfamilyfont{song}{SimSun}
+
+%\usepackage{fontawesome}
+%%\usepackage{graphicx}
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{verbatim}
+% %\usepackage{graphicx, listings, multicol, wrapfig, caption, subfig, color, }
+
+%\quote{``Do what you fear, and the death of fear is certain.''\\-- Anthony Robbins}
+\AtBeginDocument{\recomputelengths}  % required when changes are made to page layout lengths
+% personal data
+\firstname{Dapeng}
+\familyname{Hu}
+\title{Block Chain Geek and Investor}
+\mobile{+86 18612523725}
+\social[linkedin][cn.linkedin.com/in/hudapeng]{LinkedIn/hudapeng}
+\social[github][github.com/dapenghu]{Github/hudapeng}
+%\social[twitter][https://github.com/dapenghu]{Github/hudapeng}
+\email{damon.hu@hotmail.com}
+\photo[64pt]{images/me.png}
+% '64pt' is the height the picture must be resized
+
+%\usepackage{hyperref}
+%\hypersetup{    colorlinks=true,    linkcolor=blue,    filecolor=magenta,  urlcolor=cyan}
+\AfterPreamble{
+	\hypersetup{ colorlinks=true,  linkcolor=cyan,  filecolor=magenta,    urlcolor=blue}
+}
+\nopagenumbers{}       
+
+% uncomment to suppress automatic page numbering for CVs longer than one page
+%% \renewcommand*{\sectionfont}{\LARGE\sffamily\monospace\slshape}
+%% \renewcommand*\addressfont{\fontfamily{pzc}\selectfont}
+%% \renewcommand*\sectionfont{\fontfamily{pzc}\fontsize{20}{24}\selectfont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Body
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+%\section{Master thesis}
+%\cvline{title}{\emph{Title}}
+%\cvline{supervisors}{Supervisors}
+%\cvline{description}{\small Short thesis abstract}
+
+%%========================== Highlight ================================
+\section{Highlight}
+\vspace*{0.2\baselineskip}
+\cventry{Education}{ Graduated from Peking University, MS in Mathmematics}{}{}{}{}
+\cventry{Programming}{Java, C/C++,  C\raisebox{.6ex}{\scriptsize\#}, GoLang, Javascript, Python}{}{}{}{}
+\cventry{Blockchain}{Bitcoin, Ethereum, Cryptography, Smart Contract, Consensus Algorithm}{}{}{}{}
+\cventry{Experience}{16 years of R\&D experience in IT industry, e.g. Microsoft, Baidu, Oracle, Huawei}{}{}{}{}
+\cventry{Investment}{10 months of investiment experience in Cryptocurrency and ICO, e.g. OMG, Tenx, BTM, Status}{}{}{}{}
+\cventry{Startup}{Working experience in 2 blockchain startup}{}{}{}{}
+
+%%========================== Education ================================
+\vspace*{0.4\baselineskip}
+
+\section{Education}
+\vspace*{0.2\baselineskip}
+\cventry{
+	\begin{minipage}[p]{8mm}
+		\includegraphics[width=8mm]{images/pku}
+	\end{minipage}
+  \hspace{15 pt}}{Peking University}{M.S. in Applied Mathematics}{1998-09 $\sim$ 2001-06}{}{}
+
+
+\vspace*{0.2\baselineskip}
+\cventry{
+	\begin{minipage}[p]{8mm}
+		\includegraphics[width=8mm]{images/sdu}
+	\end{minipage}
+\hspace{14 pt}}{Shandong University} {B.S. in Computational Mathematics}{1994-09 $\sim$ 1998-06}{}{}
+
+\vspace*{0.4\baselineskip}
+
+%%========================== Startup ================================
+\section{Startup Experience}
+\vspace*{0.2\baselineskip}
+\cventry{
+	\begin{minipage}[p]{14mm}
+		\includegraphics[width=10mm]{images/ask}
+	\end{minipage} }
+	{ AskCoin -- Cofunder \& Core Developer}{2017-07 $\sim$ 2017-09}{}{}
+	{The AskCoin system is a blockchain infrastructure designed specially for the knowledge sharing platform. AskCoin leverages DAG (Directed Acyclic Graph) based distributed ledger technology. DAG works differently than the blockchain technology and shows advantage on latency and system throughtput.}
+\vspace{1ex}
+
+\cventry{
+	\begin{minipage}[p]{14mm}
+		\includegraphics[width=10mm]{images/wanchain}
+	\end{minipage} }
+	{Wanchain -- Architect}{2017-11 $\sim$ 2017-12}{}{}
+	{Wanchain aims to build an infrastructure of decentralized bank of digital assets. It implements a cross-chain protocol which supports cross-chain transactions and smart contracts. It also leverages the latest cryptographic technology to protect privacy of digital assets and transactions.}
+\vspace{1ex}
+
+%%========================== Project Experience ================================
+\vspace*{0.4\baselineskip}
+
+\section{Project Experience}
+\vspace{2ex}
+
+%%========================== Microsoft ================================
+\cventry{
+	\begin{minipage}[p]{14mm}
+		\includegraphics[width=10mm]{images/ms}
+	\end{minipage}}	{ Microsoft Corporation -- Architect}{}{}{}{}
+
+\vspace{1ex}
+\cventry{2016-07  \linebreak $\sim$ 2017-06}{\href{https://azure.microsoft.com/} {Azure} - Data Lake Store \& Analytics}{Big Data, Hive, SQL Server}{}{}
+{
+    \textbf{ADLA} - Azure Data Lake Analytics provides a cost-effective framework to efficiently analyze big data in Azure Database, Azure Data Lake Store and Azure Data Warehouse.
+    \begin{itemize}
+		\item[-] Improved SQL design to minimize CPU spike on SQL Server.
+		\item[-] Designed fine-grained authorization on ADLA to support SQL compliant access policy.
+	\end{itemize}
+}
+\vspace{2ex}
+
+\pagebreak
+%%=========================  Baidu  ================================
+\cventry{
+	\begin{minipage}[p]{14mm}
+		\includegraphics[width=10mm]{images/baidu.jpg}
+	\end{minipage} }
+	{ Baidu Corporation -- Architect}{}{}{}{}
+	\vspace{1ex}
+
+\cventry{2015-03 \linebreak $\sim$ 2016-06}{\href{https://cloud.baidu.com/} {Baidu Cloud} - Media Services}{Cloud, Streaming Media, Objective-C, Java, C}{}{}
+{
+	 Baidu Cloud is a highly reliable, scalable, low-cost, secure infrastructure platform.
+	 Media Services are a collection of Baidu Cloud service which help customers to manage and broadcast valuable audio/video content to larger audiences on most popular digital devices, such as tablets and mobile phones.
+	 \begin{itemize}
+		\item[-] Designed Multimedia Cloud Transcoder service, which is a distributed system to transcode audio/video files in parallel.
+		\item[-] Improved video live broadcast performance, e.g. time delay reduction from 8-10s to 3-5s.
+	 \end{itemize}
+}
+
+\vspace{2ex}
+\vspace*{0.4\baselineskip}
+
+%%=========================  Oracle  ================================
+\cventry{
+    \begin{minipage}[p]{14mm}
+        \includegraphics[width=15mm]{images/oracle}
+   \end{minipage} }
+{ Oracle Corporation -- Principal Software Developer}{}{}{}{}
+\vspace{1ex}
+\cventry{2011-02 \linebreak $\sim$ 2014-11}{\href{https://www.oracle.com/middleware/weblogic/index.html}{Oracle WebLogic Server}}{JavaEE}{}{}
+{
+  Oracle WebLogic Server is an application server across conventional and cloud environments. It enables enterprises to deploy mission-critical applications in a robust, secure, highly available, and scalable environment.
+  \begin{itemize}
+    \item[-] Acted as tech leader for connector container and responsible for designing and implementing enhancement or
+               new features, e.g. Multi-Tenancy, JCA(Java Connector Architecture)1.7 etc.
+  \end{itemize}
+}
+\vspace*{0.4\baselineskip}
+
+\vspace*{0.2\baselineskip}
+\cventry{2012-07 \linebreak $\sim$ 2013-06}{\href{https://glassfish.java.net/}{GlassFish Server}}{JavaEE}{}{}
+{
+  GlassFish Server is an open-source application server  and the reference implementation of the Java EE. It allows developers to create enterprise
+  applications that are scalable, and portable with legacy technologies.
+  \begin{itemize}
+    \item[-]Contributed to technical discussion in expert group of JCA (Java Connector Architecture) and related specification for Java EE 7, and responsible for implementing new features in GlassFish 4.0
+  \end{itemize}
+}
+
+%%==========================  Nortel  ===============================
+\vspace{2ex}
+\vspace*{0.4\baselineskip}
+
+\cventry{
+    \begin{minipage}[p]{8mm}
+            \includegraphics[width=8mm]{images/nortel}
+    \end{minipage}}
+{Nortel Networks -- Senior Software Developer}{Telecommunication}{}{}{}
+\cventry{2008-01 \linebreak $\sim$ 2010-10}{Agile Communication Environment (ACE)}{Java, Spring}{}{}
+{
+  ACE implements a set of web services (defined by Parlay X) which enable software developers to use the capability of an underlying telephone network. It aims at integrating telecommunication functions into existing enterprise applications and business processes.
+  \begin{itemize}
+    \item[-] Designed and implemented performance monitoring module which glean performance indicators of each web service.
+  \end{itemize}
+}
+\vspace*{0.4\baselineskip}
+
+\vspace*{0.2\baselineskip}
+\cventry{2003-09 \linebreak $\sim$ 2007-12}{Computer Aided Testing Tool (CATT)}{Java, SS7, 3GPP}{}{}
+{
+  CATT is unified solution for interactive/automation testing of telecommunication networks. It provides various distributed simulators for protocol testing.
+  \begin{itemize}
+    \item[-] Responsible for developing and maintaining protocol simulators for 3G core network circuit switch field, e.g. H.248, and Q.2630.
+  \end{itemize}
+}
+
+%%============================  Huawei  =============================
+\vspace*{0.2\baselineskip}
+\vspace*{0.2\baselineskip}
+\vspace*{0.4\baselineskip}
+\cventry{
+    \begin{minipage}[p]{8mm}
+            \includegraphics[width=8mm]{images/huawei}
+    \end{minipage}}
+{Huawei Technologies -- Software Developer}{Telecommunication}{}{}{}
+
+\cventry{2001/07 --2003/08}{UMG8900 Universal Multi-Media Gateway}{Telecommunication, VxWorks}{}{}
+{
+  UMG8900  is a core network device in the GSM/UMTS solution. It implements service bearer conversion, inter-working,  and service stream format processing.
+  \begin{itemize}
+    \item[-] Designed and implemented resource management and load balance for IP, TDM, ATM and TC resources. The module  is used to manage resources across the whole equipment and load-balancing based on workload on each blade.
+  \end{itemize}
+}
+
+%%=========================================================
+
+\vspace*{0.4\baselineskip}
+
+\section{Certifications}
+\cventry{
+    \begin{minipage}[p]{9mm}
+        \includegraphics[width=9mm]{images/scea}
+    \end{minipage}
+}
+{Sun Certified Enterprise Architect for Java EE }{}{}{}{}
+\vspace*{0.4\baselineskip}
+\cventry{
+    \begin{minipage}[p]{9mm}
+        \includegraphics[width=9mm]{images/scjp}
+    \end{minipage}
+}
+{Sun Certified Programmer for Java SE }{}{}{}{}
+
+% \closesection{}                   % needed to renewcommands
+% \renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+\end{document}

@@ -1,0 +1,238 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Header
+% Chinese version should be built with XeLaTex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{moderncv}
+
+
+% optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[blue]{classic}                % idem  casual,  oldstyle,  banking, classic
+
+% Configuration for Chinese
+\usepackage[utf8]{inputenc}
+\usepackage[slantfont,boldfont]{xeCJK}
+\setCJKmainfont{STSong}
+%\setCJKmainfont{SimSun}
+%\setCJKfamilyfont{song}{SimSun}
+
+%%\usepackage{graphicx}
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{verbatim}
+% %\usepackage{graphicx, listings, multicol, wrapfig, caption, subfig, color, }
+
+%\quote{``Do what you fear, and the death of fear is certain.''\\-- Anthony Robbins}
+\AtBeginDocument{\recomputelengths}  % required when changes are made to page layout lengths
+% personal data
+\firstname{胡大鹏}
+\familyname{}
+\title{区块链极客, 投资者}
+\mobile{+86 18612523725}
+\social[linkedin][cn.linkedin.com/in/hudapeng]{LinkedIn/hudapeng}
+\social[github][github.com/dapenghu]{Github/hudapeng}
+\email{damon.hu@hotmail.com}
+\photo[64pt]{images/me.png}
+% '64pt' is the height the picture must be resized
+
+%\usepackage{hyperref}
+%\hypersetup{    colorlinks=true,    linkcolor=blue,    filecolor=magenta,  urlcolor=cyan}
+\AfterPreamble{
+	\hypersetup{ colorlinks=true,  linkcolor=cyan,  filecolor=magenta,    urlcolor=blue}
+}
+\nopagenumbers{}       
+
+% uncomment to suppress automatic page numbering for CVs longer than one page
+%% \renewcommand*{\sectionfont}{\LARGE\sffamily\monospace\slshape}
+%% \renewcommand*\addressfont{\fontfamily{pzc}\selectfont}
+%% \renewcommand*\sectionfont{\fontfamily{pzc}\fontsize{20}{24}\selectfont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Body
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+%\section{Master thesis}
+%\cvline{title}{\emph{Title}}
+%\cvline{supervisors}{Supervisors}
+%\cvline{description}{\small Short thesis abstract}
+
+%%========================== Highlight ================================
+\section{简介}
+\vspace*{0.2\baselineskip}
+\cventry{学历背景}{毕业于北京大学，数学硕士学位}{}{}{}{}
+\cventry{编程语言}{Java, C/C++,  C\raisebox{.6ex}{\scriptsize\#}, GoLang, Javascript, Python}{}{}{}{}
+\cventry{区块链技术}{比特币, 以太坊, 密码学, 智能合约, 共识算法}{}{}{}{}
+\cventry{工作经历}{16年IT$\backslash$互联网公司工作经验: 微软, 百度, 甲骨文, 华为}{}{}{}{}
+\cventry{行业经验}{通信,中间件,云计算,大数据,互联网，音视频}{}{}{}{}
+\cventry{投资经历}{10个月加密货币和ICO 投资经验，曾经参投: OMG, Tenx, BTM, Status等}{}{}{}{}
+\cventry{创业经历}{两家区块链创业公司: AskCoin, 万维链}{}{}{}{}
+
+%%========================== Education ================================
+\vspace*{0.4\baselineskip}
+
+\section{学历}
+\vspace*{0.2\baselineskip}
+\cventry{
+	\begin{minipage}[p]{8mm}
+		\includegraphics[width=8mm]{images/pku}
+	\end{minipage}
+\hspace{15 pt}}{北京大学}{应用数学硕士}{1998-09 $\sim$ 2001-06}{}{}
+
+
+\vspace*{0.2\baselineskip}
+\cventry{
+	\begin{minipage}[p]{8mm}
+		\includegraphics[width=8mm]{images/sdu}
+	\end{minipage}
+\hspace{14 pt}}{山东大学} {计算数学学士}{1994-09 $\sim$ 1998-07}{}{}
+
+%%========================== Startup ================================
+\vspace*{0.4\baselineskip}
+\section{区块链创业经验}
+\vspace*{0.2\baselineskip}
+\cventry{
+	\begin{minipage}[p]{14mm}
+		\includegraphics[width=10mm]{images/ask}
+	\end{minipage} }
+	{ AskCoin -- 联合创始人 \& 核心开发者}{2017-07 $\sim$ 2017-09}{}{}
+	{AskCoin 是一个面向知识共享服务的区块链平台. AskCoin 基于DAG(有向无环图)技术重新实现共识账本系统. 相对于比特币, 以太坊等以区块链为基本数据结构的共识账本系统，DAG在响应延时，吞吐量等系统性能上有很大的优势，非常适合大量的小额支付场景}
+\vspace{1ex}
+
+\cventry{
+	\begin{minipage}[p]{14mm}
+		\includegraphics[width=10mm]{images/wanchain}
+	\end{minipage} }
+	{万维链 -- 架构师}{2017-11 $\sim$ 2017-12}{}{}
+	{万维链旨在建立一个通用的跨链协议，任何区块链网络，无论公有链、还是联盟链，均能低成本的接入万维链。不但能完成数字资产的跨链交易, 还能支持跨链的智能合约。同时应用最新的密码学技术，保证资产交易和智能合约的隐私性}
+\vspace{1ex}
+
+%%========================== Project Experience ================================
+\vspace*{0.4\baselineskip}
+
+\section{工作经验}
+\vspace{2ex}
+
+%%========================== Microsoft ================================
+\cventry{
+	\begin{minipage}[p]{14mm}
+		\includegraphics[width=10mm]{images/ms}
+	\end{minipage}}	{微软 -- 架构师}{}{}{}{}
+
+\vspace{1ex}
+\cventry{2016-07  \linebreak $\sim$ 2017-06}{\href{https://azure.microsoft.com/} {Azure} - Data Lake Store \& Analytics}{云计算、大数据}{}{}
+{
+    \textbf{ADLA} - Azure Data Lake Analytics 是一个经济、高效、易操作的流式大数据分析云服务。用户只需要专注于编写、运行和管理作业，而不需要管理底层的大数据基础设施。ADLA的特性包括: 动态扩容、可视化执行、按需付费、自动部署、丰富的查询语言、多种数据存储系统。
+    \begin{itemize}
+		\item[-] 优化SQL server 数据库设计，提高SQL运行效率，提高系统的可靠性
+		\item[-] 优化认证与授权系统，支持细粒度SQL访问策略
+	\end{itemize}
+}
+\vspace{2ex}
+
+\pagebreak
+%%=========================  Baidu  ================================
+\cventry{
+	\begin{minipage}[p]{14mm}
+		\includegraphics[width=10mm]{images/baidu.jpg}
+	\end{minipage} }
+	{ 百度 -- 架构师}{}{}{}{}
+	\vspace{1ex}
+
+\cventry{2015-03 \linebreak $\sim$ 2016-06}{\href{https://cloud.baidu.com} {百度云}}{云计算,流媒体}{}{}
+{
+	 依托于百度高可靠、高性能、低成本、大容量的数据存储、内容分发、GPU计算等基础设施，多媒体智能云为企业提供了视频点播、视频直播、音视频转码、图像分析、内容审核等多媒体服务.
+	 \begin{itemize}
+		\item[-] 设计多媒体转码服务，支持大规模并行处理转码任务.
+		\item[-] 优化视频直播服务的性能，通过自适应码率、缓存优化,容错等技术把8-10秒的延时降低至3-5秒。
+	 \end{itemize}
+}
+
+\vspace{2ex}
+\vspace*{0.4\baselineskip}
+
+%%=========================  Oracle  ================================
+\cventry{
+    \begin{minipage}[p]{14mm}
+        \includegraphics[width=15mm]{images/oracle}
+   \end{minipage} }
+{ 甲骨文 -- 资深软件工程师}{企业应用平台、中间件}{}{}{}
+\vspace{1ex}
+\cventry{2011-02 \linebreak $\sim$ 2014-11}{\href{https://www.oracle.com/middleware/weblogic/index.html}{WebLogic/GlassFish 应用服务器}}{JavaEE, 云计算}{}{}
+{
+  WebLogic与GlassFish分别是商用和开源的 Java 企业应用服务器。它们都支持标准 JavaEE 规范，提供安全、可靠、高性能、可扩容的企业应用部署平台。
+  \begin{itemize}
+    \item[-] 作为JCA (Java Connector Architecture) 专家组成员，参与 JCA 1.7 规范的制定和参考实现。
+    \item[-] 领导 JCA 容器的设计和开发，实现虚拟容器特性，支持应用服务器的PaaS功能.
+  \end{itemize}
+}
+
+%%==========================  Nortel  ===============================
+\vspace{2ex}
+\vspace*{0.4\baselineskip}
+
+\cventry{
+    \begin{minipage}[p]{8mm}
+            \includegraphics[width=8mm]{images/nortel}
+    \end{minipage}}
+{北电网络 -- 资深软件工程师}{通信}{}{}{}
+\cventry{2008-01 \linebreak $\sim$ 2010-10}{Agile Communication Environment (ACE)}{Java, Web服务}{}{}
+{
+  基于 ParlayX 规范，ACE将通信系统的数据与功能包装成Web服务，为企业应用提供了通信系统的系统集成平台，
+  \begin{itemize}
+    \item[-] 设计并实现Web应用的性能管理功能，收集、监控各个服务的性能指标，实时发现故障并告警 \end{itemize}
+}
+
+\vspace*{0.2\baselineskip}
+\cventry{2003-09 \linebreak $\sim$ 2007-12}{Computer Aided Testing Tool (CATT)}{SS7, 3GPP}{}{}
+{
+  CATT 是一个多功能通信协议测试平台。它支持SS7, 3GPP, ITU-T等多种协议族，提供易用灵活的测试脚本开发环境，和大规模并行测试运行环境。
+  \begin{itemize}
+    \item[-] 面向3G 核心网络设备，设计并实现多种协议的测试组件，例如H.248, Q.2630 等。
+  \end{itemize}
+}
+
+%%============================  Huawei  =============================
+\vspace*{0.2\baselineskip}
+\vspace*{0.2\baselineskip}
+\vspace*{0.4\baselineskip}
+
+\cventry{
+    \begin{minipage}[p]{8mm}
+            \includegraphics[width=8mm]{images/huawei}
+    \end{minipage}}
+{华为北研所 -- 软件工程师}{通信}{}{}{}
+
+\cventry{2001/07 --2003/08}{UMG8900 多媒体网关}{C, VxWorks}{}{}
+{
+  UMG8900 多媒体网关 是GSM/UMTS 核心网络设备. 它负责IP、ATM，TDM 多种传输网络之间的数据交换和互通。
+  \begin{itemize}
+    \item[-] 设计并实现IP、ATM、TDM、TC的资源管理和负载均衡功能。
+  \end{itemize}
+}
+
+%%=========================================================
+\vspace*{0.4\baselineskip}
+
+
+\section{技术资格认证}
+\cventry{
+    \begin{minipage}[p]{9mm}
+        \includegraphics[width=9mm]{images/scea}
+    \end{minipage}
+}
+{Sun认证Java企业架构师 }{}{}{}{}
+\vspace*{0.4\baselineskip}
+\cventry{
+    \begin{minipage}[p]{9mm}
+        \includegraphics[width=9mm]{images/scjp}
+    \end{minipage}
+}
+{Sun认证Java程序员 }{}{}{}{}
+
+% \closesection{}                   % needed to renewcommands
+% \renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+\end{document}
